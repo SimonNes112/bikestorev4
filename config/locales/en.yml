@@ -1,0 +1,12 @@
+en:
+  hello: "Hello world"
+  back: 'Back to previous page'
+
+  bike_type:
+    new: 'New bike typeeeeee'
+
+  helpers:
+    submit:
+      create: Create a %{model}
+      submit: Save %{model}
+      update: Update %{model}

@@ -1,0 +1,26 @@
+<%= form_with(model: bike_photo) do |form| %>
+  <% if bike_photo.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(bike_photo.errors.count, "error") %> prohibited this bike_photo from being saved:</h2>
+
+      <ul>
+        <% bike_photo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :photo, style: "display: block" %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="form-group">
+    <%= form.select :bike_id, Bike.all.map { |t| [t.id]}, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit %>
+  </div>
+<% end %>

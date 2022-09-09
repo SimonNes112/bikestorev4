@@ -1,0 +1,11 @@
+p style="color: green" = notice 
+
+= render @bike_type 
+
+.
+  = link_to "Edit this bike_type", edit_bike_type_path(@bike_type), class:"btn btn-primary"
+  = link_to "Back to bikes_type", bike_types_path, class:"btn btn-primary" 
+
+  = button_to "Destroy this bike_type", @bike_type, method: :delete, class:"btn btn-secondary"
+
+

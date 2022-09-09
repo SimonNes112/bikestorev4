@@ -1,0 +1,51 @@
+<div class="container">
+  <div id="<%= dom_id bike %>">
+    <p>
+      <strong>Title:</strong>
+      <%= bike.title %>
+    </p>
+
+    <p>
+      <strong>Price:€</strong>
+      <%= bike.price %>
+    </p>
+
+    <p>
+      <strong>electric:</strong>
+      <%= bike.electric %>
+    </p>
+
+    <p>
+      <strong>Model:</strong>
+      <%= bike.bike_model.try(:models_name) %>
+    </p>
+
+    <% if bike.bike_model.bike_brand %>
+      <p>
+        <strong>Merk:</strong>
+        <%= bike.bike_model.bike_brand&.name_brand %>
+      </p>
+    <% end %>
+
+   
+
+
+    <% bike.bike_photos.each do |bike_photo| %>
+      <p>
+        <strong></strong>
+      
+        <%= image_tag url_for(bike_photo.image), class:"foto"%>
+      </p>
+    <% end %>
+
+
+    
+
+
+    
+    
+
+    
+
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<%= form_with(model: bike) do |form| %>
+  <% if bike.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(bike.errors.count, "error") %> prohibited this bike from being saved:</h2>
+
+      <ul>
+        <% bike.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :price, style: "display: block" %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :electric %>
+    <%= form.check_box :electric %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :bike_model_id, style: "display: block" %>
+    <%= form.select :bike_model_id, BikeModel.all.map { |t| [t.id]}, class: "form-control" %>
+  </div>
+
+  
+
+  <div class="form-group">
+    <%= form.submit %>
+  </div>
+<% end %>

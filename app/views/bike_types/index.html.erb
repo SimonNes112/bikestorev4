@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>bike_types</h1>
+
+<div id="bike_type">
+  <% @bike_types.each do |bike_type| %>
+    <%= render bike_type%>
+    <p>
+      <%= link_to "Show this bike_type", bike_type , class:"btn btn-primary" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New bike_types", new_bike_type_path, class:"btn btn-secondary"%>
+

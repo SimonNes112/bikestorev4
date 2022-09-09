@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bikestore</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <%= javascript_importmap_tags %>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">BikeStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "BikeList", "../bikes" , class: "nav-link"  %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "ModelList", "../bike_models" , class: "nav-link"  %>
+        </li>
+
+
+        <li class="nav-item">
+          <%= link_to "TypeList", "../bike_types" , class: "nav-link"  %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "PhotoList", "../bike_photos" , class: "nav-link"  %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "BrandList", "../bike_brands" , class: "nav-link"  %>
+        </li>
+        
+        
+        
+      </ul>
+    </div>
+  </nav>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

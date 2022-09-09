@@ -1,0 +1,2 @@
+module BikeModelHelper
+end
